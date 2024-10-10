@@ -53,3 +53,6 @@ uint8_t UART5_ReceiveByte(void) {
     {
         UART5_send();
     }
+ return UART5_DR_R; // Read data
+//return 0;
+}
