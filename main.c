@@ -35,4 +35,8 @@ void PORTE_Initialisation(void) {
     GPIO_PORTE_PCTL_R &= ~0x00FF0000;
     GPIO_PORTE_PCTL_R |= 0x00110000;
 }
+void UART5_Initialisation(void) {
 
+
+    UART5_CTL_R = 0x00;                     // Disable UART before configuration
+    UART5_IBRD_R = 104;                     // Integer part of BRD = 16MHz / (16 * 9600) = 104
