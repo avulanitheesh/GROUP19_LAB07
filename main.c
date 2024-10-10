@@ -49,3 +49,7 @@ void UART5_Initialisation(void) {
 }
 uint8_t UART5_ReceiveByte(void) {
 
+ while ((UART5_FR_R & 0x10) != 0) // Wait until RXFE is 0
+    {
+        UART5_send();
+    }
