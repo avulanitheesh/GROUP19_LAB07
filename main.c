@@ -85,4 +85,16 @@ void UART5_Read(void){
              GPIO_PORTF_DATA_R &= ~0x02;     // Turn off red LED (error
 
         }
+else
+        {
+            GPIO_PORTF_DATA_R &= ~0x08;  // Turn off green LED
+            GPIO_PORTF_DATA_R &= ~0x04;   // Turn off blue LED
+            GPIO_PORTF_DATA_R |= 0x02;     // Turn on red LED (error)
 
+        }
+    }
+
+
+
+    }
+}
