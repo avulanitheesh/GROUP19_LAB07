@@ -17,3 +17,9 @@ void PortF_Initialisation(void){
     GPIO_PORTF_DATA_R = 0x00;               // Reset the data register (PF7-PF0 = 00000000)
 
 }
+void PORTE_Initialisation(void) {
+
+    // Enable the clock for UART5 and GPIO Port D
+
+    SYSCTL_RCGCGPIO_R |= SYSCTL_RCGC2_GPIOE;     // Enable GPIO Port D clock
+    SYSCTL_RCGCUART_R |= (1<<5);     // Enable UART5 clock
