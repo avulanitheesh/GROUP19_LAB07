@@ -98,3 +98,14 @@ else
 
     }
 }
+void UART5_send(void){
+
+    if (!(GPIO_PORTF_DATA_R & 0X01)) { // 0X01 pressed
+        UART5_Transmit(0xF0);
+        while (!(GPIO_PORTF_DATA_R & 0X01)); // Wait until released
+    }
+    if (!(GPIO_PORTF_DATA_R & 0X10)) { // 0X10 pressed
+        UART5_Transmit(0xAA);
+        while (!(GPIO_PORTF_DATA_R & 0X10)); // Wait until released
+    }
+}
