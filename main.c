@@ -47,4 +47,5 @@ void UART5_Initialisation(void) {
     UART5_CTL_R = 0x301;                    // Enable UART
 
 }
+uint8_t UART5_ReceiveByte(void) {
 
