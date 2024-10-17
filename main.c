@@ -122,5 +122,5 @@ int main(void) {
     while (1) {
 
         UART5_Read();
-    }
+}
 }
